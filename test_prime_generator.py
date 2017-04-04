@@ -11,5 +11,8 @@ class PrimeNumberGenerator(unittest.TestCase):
 	def test_generate_prime_numbers_checks_for_integers_only(self):
 		self.assertEqual(generate_prime_numbers(53.34), "That is not an integer. Please enter a number without a decimal", "Fail: No handling of non integers like decimals")
 
+	def test_generate_prime_numbers_produces_a_list(self):
+		self.assertEqual(isinstance(generate_prime_numbers(13), list), True, "Fail: Output is NOT in a list format")
+
 if __name__ == '__main__':
 	unittest.main()
